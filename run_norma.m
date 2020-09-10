@@ -1,8 +1,9 @@
+%Eseguire algoritmi ----------------------------------
 
 % Copia e incolla i seguenti comandi:
-A = [ 1 2  ; 3 4 ;  5 6 ];
+A = [ 1 2  ; 3 4 ;  5 6 ]; % esempio matrice con 2 colonne (= 2 variabili)
 Q = A'*A;
-cd C:\Users\Diletta\Documents\MATLAB\Progetto % path to directory
+cd % path to directory
 F = norma();
 [ x , state ] = SDG(F{1})
 
@@ -14,11 +15,9 @@ fcontour( f, 'LineColor', 'k', 'LineWidth', 1)
 % -----------------------------------------------------
 
 
-% altri punti di partenza
-r = rand(n , 1)
+% altri punti di partenza random
+r = rand(n , 1) % per due variabili: n=2
 [ x , state ] = SDG(F{1}, r) 
-
-% trovare vettori interessanti da cui partire 
 
 
 
