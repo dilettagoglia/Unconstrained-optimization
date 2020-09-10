@@ -1,3 +1,5 @@
+%last update: 10-09-2020 (Diletta)
+
 function [ x , status ] =  SDG( f , varargin )
 
 %function [ x , status ] = SDG( f , x , eps , MaxFeval , m1 , m2 , astart ,
@@ -386,8 +388,8 @@ lsiter = 1;  % count iterations of second phase
 
 % SECOND PHASE --------------------------------------------------
 
-am = 0; %step iniziale dove la derivata è negativa
-a = as; %step dove la derivata è positiva
+am = 0; %step iniziale dove la derivata Ã¨ negativa
+a = as; %step dove la derivata Ã¨ positiva
 phipm = phip0;
 
 while ( func_eval <= MaxFeval ) && ( ( as - am ) ) > mina && ( phips > 1e-12 )
