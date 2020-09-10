@@ -1,8 +1,9 @@
+% last update: 10-09-2020 (Diletta)
 
 function F = norma()
 
 % Produces a cell array of a function handler, useful to run the unconstrained
-% optimization algorithm of estimating the 2-norm for a possibly rectangular matrix A.
+% optimization algorithm of estimating the 2-norm for a possibly rectangular matrixÂ A.
 %
 % The function in the array has the following interface:
 %
@@ -57,7 +58,7 @@ function F = norma()
        end
     else
 
-        Q = A'*A; % Q è quadrata e simmetrica
+        Q = A'*A; % Q Ã¨ quadrata e simmetrica
         % x = sym('x', [n 1]) % x target vector (n x 1) --> x(1), x(2), ... , xn sono le variabli della funzione
         v = - ( (x'*Q*x) / (x'*x) );  % f(x)
         % v = - norm(A*x)/norm(x);
