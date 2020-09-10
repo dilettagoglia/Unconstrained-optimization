@@ -101,14 +101,7 @@ function [ x , status ] =  SDG( f , varargin )
 %   = 'error': the algorithm found a numerical error that prevents it from
 %     continuing optimization (see mina above)
 %
-%{
- =======================================
- Author: Antonio Frangioni
- Date: 13-11-19
- Version 1.11
- Copyright Antonio Frangioni
- =======================================
-%}
+
 
 Plotf = true;  % if f and the trajectory have to be plotted when n = 2
 
