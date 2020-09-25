@@ -3,7 +3,7 @@ normFunction = @norm2;
 
 function [v, varargout] = norm2(x)
 
-type basic_matrix.txt;
+%type basic_matrix.txt;
 A = readmatrix('basic_matrix.txt');
 [a, b] = size(A);
 

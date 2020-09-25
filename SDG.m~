@@ -392,7 +392,7 @@ while ( func_eval <= MaxFeval ) && ( ( as - am ) ) > mina && ( phips > 1e-12 )
    %     diventa troppo piccolo e non riesco ancora a trovare
    % funzione se am non è troppo grande
 
-   a = ( am * phips - as * phipm ) / ( phips - phipm ); % quadratic
+   % a = ( am * phips - as * phipm ) / ( phips - phipm ); % quadratic
    % interpolation formula: gives me the point in the middle (tra as e am)
    % compute the new value by safeguarded quadratic interpolation
    a = max( [ am + ( as - am ) * sfgrd min( [ as - ( as - am ) * sfgrd  a ] ) ] );
@@ -437,7 +437,7 @@ function [ as , phia ] = BacktrackingLS( phi0 , phip0 , as , m1 , tau )
 % returns the optimal step and the optimal f-value
 
 lsiter = 1;  % count ls iterations
-while func_eval <= MaxFeval && as > minas
+while func_eval <= MaxFeval && as > mina
    [ phia , ~ ] = f2phi( as );
    if phia <= phi0 + m1 * as * phip0  % Armijo satisfied
       break;                          % done
