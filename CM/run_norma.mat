@@ -1,0 +1,15 @@
+m=randi(10); 
+n=randi(10);
+% A=randn(m,n); % matrice rettangolare (m x n) di valori random%
+% oppure 
+A = sym('a', [m n]) 
+x = sym('x', [n 1]) % x target vector (n x 1) --> x1, x2, ... , xn sono le variabli della funzione
+Q=A'*A % Q è quadrata e simmetrica
+v = (x'*Q*x)/(x'*x);  % f(x)
+
+ 
+  for i = 1:n
+    g(i) = diff(f, x(i)); % crea un array di n elementi con le derivate calcolate in xi
+  end
+
+fcontour( f, [-9, 10], 'LineColor', 'k', 'LineWidth', 1);
